@@ -8,4 +8,10 @@ public class AppTest {
     Integer winner = 1;
     assertEquals(winner, app.checkWinner("paper", "rock"));
   }
+  @Test
+  public void checkWinner_recognizesScissorsBeatsPaper_2() {
+    App app = new App();
+    Integer winner = 2;
+    assertEquals(winner, app.checkWinner("paper", "scissors"));
+  }
 }

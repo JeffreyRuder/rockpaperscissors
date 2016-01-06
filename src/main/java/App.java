@@ -6,7 +6,13 @@ public class App {
     Integer winner = 0;
 
     switch (playerOneChoice) {
-      case "paper": if(playerTwoChoice == "rock") {winner = 1;} break;
+      case "paper":
+        if(playerTwoChoice == "rock") {
+          winner = 1;
+        } else if(playerTwoChoice == "scissors") {
+          winner = 2;
+        }
+        break;
       default: break;
     }
 
