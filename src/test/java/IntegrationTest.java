@@ -33,13 +33,21 @@ public class IntegrationTest extends FluentTest {
       Integer valueTestAsInt = Integer.parseInt(valueTest);
       assertEquals((Integer)valueTestAsInt, (Integer)10);
     }
-    @Test
-      public void checkGameWinner() {
-        goTo("http://localhost:4567");
-        click("#scissors");
-        submit(".btn");
-        click("#paper");
-        submit(".btn");
-        assertThat(pageSource()).contains("The winner is: Player 1");
-      }
+  @Test
+    public void checkGameWinner() {
+      goTo("http://localhost:4567");
+      click("#scissors");
+      submit(".btn");
+      click("#paper");
+      submit(".btn-default");
+      assertThat(pageSource()).contains("The winner is: Player 1");
+    }
+  @Test
+    public void checkComputerPlayer() {
+      goTo("http://localhost:4567");
+      click("#scissors");
+      submit(".btn");
+      submit(".btn-danger");
+      assertThat(pageSource()).contains("Computer chose:");
+    }
 }

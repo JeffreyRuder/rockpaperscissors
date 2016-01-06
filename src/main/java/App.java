@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Random;
 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -27,6 +28,7 @@ public class App {
       String player1choice = request.queryParams("choice");
 
       model.put("player1choice", player1choice);
+      model.put("player1choice2", player1choice);
 
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -59,6 +61,45 @@ public class App {
         winnerName = "Player 1";
       } else if (winnerNumber == 2) {
         winnerName = "Player 2";
+      } else {
+        winnerName = "There was a tie!";
+      }
+
+      model.put("winnerName", winnerName);
+
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/computer-results", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/computer-results.vtl");
+
+      Integer player1choice = Integer.parseInt(request.queryParams("choice3"));
+      Random computerPlayer = new Random();
+
+      Integer player2choice = (computerPlayer.nextInt(3)) + 9;
+
+      Integer winnerNumber = checkWinner(player1choice, player2choice);
+
+      String playerOneChoiceInWords;
+      String playerTwoChoiceInWords;
+      String winnerName;
+
+      HashMap<Integer, String> choiceKey = new HashMap<Integer, String>();
+      choiceKey.put(9, "rock");
+      choiceKey.put(10, "scissors");
+      choiceKey.put(11, "paper");
+
+      playerOneChoiceInWords = choiceKey.get(player1choice);
+      playerTwoChoiceInWords = choiceKey.get(player2choice);
+
+      model.put("player1choice", playerOneChoiceInWords);
+      model.put("player2choice", playerTwoChoiceInWords);
+
+      if (winnerNumber == 1) {
+        winnerName = "Player 1";
+      } else if (winnerNumber == 2) {
+        winnerName = "Computer";
       } else {
         winnerName = "There was a tie!";
       }
