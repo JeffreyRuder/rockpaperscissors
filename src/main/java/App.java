@@ -13,6 +13,11 @@ public class App {
           winner = 2;
         }
         break;
+      case "rock":
+        if(playerTwoChoice == "scissors") {
+          winner = 1;
+        }
+        break;
       default: break;
     }
 
