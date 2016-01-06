@@ -1,0 +1,6 @@
+| Behavior | Input | Result |
+| --- | --- | --- |
+| Program recognizes paper beats rock | Paper, Rock | Returns 1 |
+| Program recognizes scissors beat paper | Paper, Scissors | Returns 2 |
+| Program recognizes rock beats scissors | Rock, Scissors | Returns 1 |
+| Program recognizes a tie | Rock, Rock | Returns 3 |
