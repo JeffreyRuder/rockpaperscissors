@@ -3,12 +3,12 @@
 <form action="/results" method="post" class="fullwidthtext">
   <div class="form-group">
     <label for="player2choice-form">  </label><br>
-    <input id="player2choice-form" name="choice2" type="radio" value="rock"> Rock
+    <input id="player2choice-form rock" name="choice2" type="radio" value="9"> Rock
     <br>
-    <input name="choice2" type="radio" value="paper"> Paper
+    <input id="paper" name="choice2" type="radio" value="11"> Paper
     <br>
-    <input name="choice2" type="radio" value="scissors"> Scissors
-    <input name="choice1" type="hidden" value=$player1choice>
+    <input id="scissors" name="choice2" type="radio" value="10"> Scissors
+    <input id="hiddenPlayerChoice" name="choice1" type="hidden" value=$player1choice>
   </div>
   <button type="submit" class="btn btn-default">Prepare for battle</button>
 </form>
