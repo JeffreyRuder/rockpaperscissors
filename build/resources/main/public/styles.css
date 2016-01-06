@@ -1,0 +1,34 @@
+h1, h2 {
+  color: slategray;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.main-content {
+  margin:auto;
+}
+
+.form-group {
+  margin: auto;
+}
+
+.results .btn {
+  margin-top: 20px;
+}
+
+.btn-danger {
+  margin-top: 40px;
+}
+
+.btn-default {
+  margin-top: 5%;
+}
+
+.results{
+  align-items: center;
+  text-align: center;
+}

@@ -47,9 +47,9 @@ public class App {
       String winnerName;
 
       HashMap<Integer, String> choiceKey = new HashMap<Integer, String>();
-      choiceKey.put(9, "rock");
-      choiceKey.put(10, "scissors");
-      choiceKey.put(11, "paper");
+      choiceKey.put(9, "Rock");
+      choiceKey.put(10, "Scissors");
+      choiceKey.put(11, "Paper");
 
       playerOneChoiceInWords = choiceKey.get(player1choice);
       playerTwoChoiceInWords = choiceKey.get(player2choice);
@@ -58,9 +58,9 @@ public class App {
       model.put("player2choice", playerTwoChoiceInWords);
 
       if (winnerNumber == 1) {
-        winnerName = "Player 1";
+        winnerName = "Player 1 Wins!";
       } else if (winnerNumber == 2) {
-        winnerName = "Player 2";
+        winnerName = "Player 2 Wins!";
       } else {
         winnerName = "There was a tie!";
       }
@@ -86,9 +86,9 @@ public class App {
       String winnerName;
 
       HashMap<Integer, String> choiceKey = new HashMap<Integer, String>();
-      choiceKey.put(9, "rock");
-      choiceKey.put(10, "scissors");
-      choiceKey.put(11, "paper");
+      choiceKey.put(9, "Rock");
+      choiceKey.put(10, "Scissors");
+      choiceKey.put(11, "Paper");
 
       playerOneChoiceInWords = choiceKey.get(player1choice);
       playerTwoChoiceInWords = choiceKey.get(player2choice);
@@ -97,9 +97,9 @@ public class App {
       model.put("player2choice", playerTwoChoiceInWords);
 
       if (winnerNumber == 1) {
-        winnerName = "Player 1";
+        winnerName = "Player 1 Wins!";
       } else if (winnerNumber == 2) {
-        winnerName = "Computer";
+        winnerName = "Computer Wins!";
       } else {
         winnerName = "There was a tie!";
       }
