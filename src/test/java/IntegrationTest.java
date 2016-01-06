@@ -30,7 +30,8 @@ public class IntegrationTest extends FluentTest {
       click("#scissors");
       submit(".btn");
       String valueTest = find("#hiddenPlayerChoice").getValue();
-      assertEquals(valueTest, "scissors");
+      Integer valueTestAsInt = Integer.parseInt(valueTest);
+      assertEquals((Integer)valueTestAsInt, (Integer)10);
     }
     @Test
       public void checkGameWinner() {
