@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-01-06T22:21:07" hostname="epicodus-33.local" time="0.003">
+<testsuite name="AppTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-01-07T00:34:32" hostname="epicodus-33.local" time="0.002">
   <properties/>
-  <testcase name="checkWinner_recognizesPaperBeatsRock_1" classname="AppTest" time="0.002"/>
+  <testcase name="checkWinner_recognizesPaperBeatsRock_1" classname="AppTest" time="0.001"/>
   <testcase name="checkWinner_recognizesRockBeatsScissors_1" classname="AppTest" time="0.0"/>
   <testcase name="checkWinner_recognizesRockBeatsScissors_2" classname="AppTest" time="0.0"/>
   <testcase name="checkWinner_recognizesScissorsBeatsPaper_1" classname="AppTest" time="0.0"/>
-  <testcase name="checkWinner_recognizesScissorsBeatsPaper_2" classname="AppTest" time="0.001"/>
+  <testcase name="checkWinner_recognizesScissorsBeatsPaper_2" classname="AppTest" time="0.0"/>
   <testcase name="checkWinner_recognizesSameChoiceEqualsTie_3" classname="AppTest" time="0.0"/>
   <system-out><![CDATA[Inside check winner 1 11
 Inside check winner 2 9

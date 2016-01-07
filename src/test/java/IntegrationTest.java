@@ -40,7 +40,7 @@ public class IntegrationTest extends FluentTest {
       submit(".btn");
       click("#paper");
       submit(".btn-default");
-      assertThat(pageSource()).contains("The winner is: Player 1");
+      assertThat(pageSource()).contains("Player 1 Wins!");
     }
   @Test
     public void checkComputerPlayer() {
@@ -48,6 +48,6 @@ public class IntegrationTest extends FluentTest {
       click("#scissors");
       submit(".btn");
       submit(".btn-danger");
-      assertThat(pageSource()).contains("Computer chose:");
+      assertThat(pageSource()).contains("Computer");
     }
 }
